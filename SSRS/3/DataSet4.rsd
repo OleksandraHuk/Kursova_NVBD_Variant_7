@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet4">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Department'[Department Id], 'Dim Department'[Name], 'Dim Department'[Manager Name], 'Dim Department'[Abbreviation])</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Department Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Department Id]</HierarchyUniqueName>
+                    <LevelName>Department Id</LevelName>
+                    <UniqueName>[Dim Department].[Department Id].[Department Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Department Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Name]</HierarchyUniqueName>
+                    <LevelName>Name</LevelName>
+                    <UniqueName>[Dim Department].[Name].[Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Manager Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Manager Name]</HierarchyUniqueName>
+                    <LevelName>Manager Name</LevelName>
+                    <UniqueName>[Dim Department].[Manager Name].[Manager Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Manager Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Abbreviation</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Abbreviation]</HierarchyUniqueName>
+                    <LevelName>Abbreviation</LevelName>
+                    <UniqueName>[Dim Department].[Abbreviation].[Abbreviation]</UniqueName>
+                  </ID>
+                  <ItemCaption>Abbreviation</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Personnel Accounting DW</From>
+            <Filter>
+              <FilterItems />
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Department'[Department Id], 'Dim Department'[Name], 'Dim Department'[Manager Name], 'Dim Department'[Abbreviation])</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Department_Id">
+        <DataField>Dim Department[Department Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Dim Department[Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Manager_Name">
+        <DataField>Dim Department[Manager Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Abbreviation">
+        <DataField>Dim Department[Abbreviation]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

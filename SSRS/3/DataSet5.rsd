@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet5">
+    <Query>
+      <DataSourceReference>DataSource1</DataSourceReference>
+      <CommandText>EVALUATE SUMMARIZECOLUMNS('Dim Department'[Department Id], 'Dim Department'[Name], 'Dim Department'[Manager Name], 'Dim Employee'[Employee Id], 'Dim Employee'[Passport Data], 'Dim Employee'[Report Number], 'Dim Employee'[Date Of Birth], 'Dim Employee'[Full Name], 'Dim Employee'[Home Address], 'Dim Employee'[Place Of Birth], FILTER(VALUES('Dim Employee'[Employee Id]), ('Dim Employee'[Employee Id] = VALUE("6"))))</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.microsoft.com/AnalysisServices/QueryDefinition">
+          <CommandType>DAX</CommandType>
+          <QuerySpecification xsi:type="MDXQuerySpecification">
+            <Select>
+              <Items>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Department Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Department Id]</HierarchyUniqueName>
+                    <LevelName>Department Id</LevelName>
+                    <UniqueName>[Dim Department].[Department Id].[Department Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Department Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Name]</HierarchyUniqueName>
+                    <LevelName>Name</LevelName>
+                    <UniqueName>[Dim Department].[Name].[Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Department</DimensionName>
+                    <HierarchyName>Manager Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Department].[Manager Name]</HierarchyUniqueName>
+                    <LevelName>Manager Name</LevelName>
+                    <UniqueName>[Dim Department].[Manager Name].[Manager Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Manager Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Employee Id</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Employee Id]</HierarchyUniqueName>
+                    <LevelName>Employee Id</LevelName>
+                    <UniqueName>[Dim Employee].[Employee Id].[Employee Id]</UniqueName>
+                  </ID>
+                  <ItemCaption>Employee Id</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Passport Data</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Passport Data]</HierarchyUniqueName>
+                    <LevelName>Passport Data</LevelName>
+                    <UniqueName>[Dim Employee].[Passport Data].[Passport Data]</UniqueName>
+                  </ID>
+                  <ItemCaption>Passport Data</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Report Number</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Report Number]</HierarchyUniqueName>
+                    <LevelName>Report Number</LevelName>
+                    <UniqueName>[Dim Employee].[Report Number].[Report Number]</UniqueName>
+                  </ID>
+                  <ItemCaption>Report Number</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Date Of Birth</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Date Of Birth]</HierarchyUniqueName>
+                    <LevelName>Date Of Birth</LevelName>
+                    <UniqueName>[Dim Employee].[Date Of Birth].[Date Of Birth]</UniqueName>
+                  </ID>
+                  <ItemCaption>Date Of Birth</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Full Name</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Full Name]</HierarchyUniqueName>
+                    <LevelName>Full Name</LevelName>
+                    <UniqueName>[Dim Employee].[Full Name].[Full Name]</UniqueName>
+                  </ID>
+                  <ItemCaption>Full Name</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Home Address</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Home Address]</HierarchyUniqueName>
+                    <LevelName>Home Address</LevelName>
+                    <UniqueName>[Dim Employee].[Home Address].[Home Address]</UniqueName>
+                  </ID>
+                  <ItemCaption>Home Address</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+                <Item>
+                  <ID xsi:type="Level">
+                    <DimensionName>Dim Employee</DimensionName>
+                    <HierarchyName>Place Of Birth</HierarchyName>
+                    <HierarchyUniqueName>[Dim Employee].[Place Of Birth]</HierarchyUniqueName>
+                    <LevelName>Place Of Birth</LevelName>
+                    <UniqueName>[Dim Employee].[Place Of Birth].[Place Of Birth]</UniqueName>
+                  </ID>
+                  <ItemCaption>Place Of Birth</ItemCaption>
+                  <UniqueName>true</UniqueName>
+                </Item>
+              </Items>
+            </Select>
+            <AutoExecute>false</AutoExecute>
+            <From>Personnel Accounting DW</From>
+            <Filter>
+              <FilterItems>
+                <FilterItem>
+                  <HierarchyUniqueName>[Dim Employee].[Employee Id]</HierarchyUniqueName>
+                  <Condition xsi:type="EqualTo">
+                    <Members>
+                      <Member>
+                        <MemberUniqueName>[Dim Employee].[Employee Id].&amp;[6]</MemberUniqueName>
+                      </Member>
+                    </Members>
+                  </Condition>
+                </FilterItem>
+              </FilterItems>
+            </Filter>
+            <Calculations />
+            <Aggregates />
+            <QueryProperties>
+              <IncludeMemberValue>true</IncludeMemberValue>
+            </QueryProperties>
+          </QuerySpecification>
+          <Query>
+            <Statement>EVALUATE SUMMARIZECOLUMNS('Dim Department'[Department Id], 'Dim Department'[Name], 'Dim Department'[Manager Name], 'Dim Employee'[Employee Id], 'Dim Employee'[Passport Data], 'Dim Employee'[Report Number], 'Dim Employee'[Date Of Birth], 'Dim Employee'[Full Name], 'Dim Employee'[Home Address], 'Dim Employee'[Place Of Birth], FILTER(VALUES('Dim Employee'[Employee Id]), ('Dim Employee'[Employee Id] = VALUE("6"))))</Statement>
+            <ParameterDefinitions />
+          </Query>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="Department_Id">
+        <DataField>Dim Department[Department Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Name">
+        <DataField>Dim Department[Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Employee_Id">
+        <DataField>Dim Employee[Employee Id]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Manager_Name">
+        <DataField>Dim Department[Manager Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Passport_Data">
+        <DataField>Dim Employee[Passport Data]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Report_Number">
+        <DataField>Dim Employee[Report Number]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Date_Of_Birth">
+        <DataField>Dim Employee[Date Of Birth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Full_Name">
+        <DataField>Dim Employee[Full Name]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Home_Address">
+        <DataField>Dim Employee[Home Address]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Place_Of_Birth">
+        <DataField>Dim Employee[Place Of Birth]</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
